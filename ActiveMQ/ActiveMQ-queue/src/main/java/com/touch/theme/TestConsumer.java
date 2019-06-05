@@ -1,4 +1,4 @@
-package com.touch.queue;
+package com.touch.theme;
 
 import cn.hutool.core.util.RandomUtil;
 import org.apache.activemq.ActiveMQConnectionFactory;
@@ -6,6 +6,9 @@ import org.apache.activemq.ActiveMQConnectionFactory;
 import javax.jms.*;
 import java.util.Date;
 
+/**
+ * 消费者
+ */
 public class TestConsumer {
 	//服务地址，端口默认61616
 	private static final String url = "tcp://127.0.0.1:61616";
@@ -26,8 +29,8 @@ public class TestConsumer {
 		connection.start();
 		//4.创建会话
 		Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
-		//5.创建一个目标 （队列类型）
-		Destination destination = session.createQueue(topicName);
+		//5.创建一个目标 （主题类型） 这里是 createTopic 而 队列模式是 createQueue，只有这一个地方不同；
+		Destination destination = session.createTopic(topicName);
 		//6.创建一个消费者
 		MessageConsumer consumer = session.createConsumer(destination);
 		//7.创建一个监听器
@@ -35,7 +38,7 @@ public class TestConsumer {
 			public void onMessage(Message arg0) {
 				TextMessage textMessage = (TextMessage) arg0;
 				try {
-					System.out.println(new Date()+":"+consumerName + "队列类型接收消息：" + textMessage.getText());
+					System.out.println(new Date()+":"+consumerName + " 主题类型接收消息：" + textMessage.getText());
 				} catch (JMSException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
