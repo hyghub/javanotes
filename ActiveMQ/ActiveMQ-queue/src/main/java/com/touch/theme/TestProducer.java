@@ -38,5 +38,6 @@ public class TestProducer {
 		}
 		//9.关闭连接
 		connection.close();
+
 	}
 }

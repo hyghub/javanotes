@@ -48,5 +48,6 @@ public class TestConsumer {
 		});
 		//8. 因为不知道什么时候有，所以没法主动关闭，就不关闭了，一直处于监听状态
 		//connection.close();
+
 	}
 }
