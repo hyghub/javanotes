@@ -1,6 +1,7 @@
 package com.touch.queue;
 
 import cn.hutool.core.util.RandomUtil;
+import com.touch.utils.ActiveMQUtil;
 import org.apache.activemq.ActiveMQConnectionFactory;
 
 import javax.jms.*;

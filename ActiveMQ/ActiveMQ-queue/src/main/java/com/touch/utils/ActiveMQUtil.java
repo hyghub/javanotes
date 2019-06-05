@@ -1,9 +1,7 @@
-package com.touch.queue;
-
+package com.touch.utils;
 import cn.hutool.core.util.NetUtil;
 
 import javax.swing.*;
-
 public class ActiveMQUtil {
 	public static void main(String[] args) {
 		checkServer();

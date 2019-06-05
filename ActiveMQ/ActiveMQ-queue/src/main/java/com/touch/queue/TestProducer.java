@@ -1,4 +1,5 @@
 package com.touch.queue;
+import com.touch.utils.ActiveMQUtil;
 import org.apache.activemq.ActiveMQConnectionFactory;
 import javax.jms.*;
 import java.util.Date;

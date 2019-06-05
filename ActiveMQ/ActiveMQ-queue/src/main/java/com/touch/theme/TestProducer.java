@@ -1,4 +1,5 @@
 package com.touch.theme;
+import com.touch.utils.ActiveMQUtil;
 import org.apache.activemq.ActiveMQConnectionFactory;
 
 import javax.jms.*;
