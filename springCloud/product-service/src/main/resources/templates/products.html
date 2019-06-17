@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>products</title>
+    <style type="text/css">
+        table{
+            border-collapse: collapse;
+            width: 400px;
+            margin:20px auto;
+        }
+        td,th{
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="workingArea">
+        <table>
+            <thead>
+                <tr>
+                    <td>id</td>
+                    <td>产品名称</td>
+                    <td>价格</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="p: ${ps}">
+                    <td th:text="${p.id}">id</td>
+                    <td th:text="${p.name}">name</td>
+                    <td th:text="${p.price}">price</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
