@@ -42,7 +42,7 @@ public class ProductDataServiceApplication {
             return p;
         });
         try {
-            port = future.get(300, TimeUnit.SECONDS);
+            port = future.get(5, TimeUnit.SECONDS);
         } catch (InterruptedException | ExecutionException | TimeoutException e) {
             port = defaultPort;
         }

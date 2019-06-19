@@ -48,6 +48,6 @@
 
   <modules>
     <module>eureka-server</module>
-      <module>productdata-service</module>
+    <module>productdata-service</module>
   </modules>
 </project>
