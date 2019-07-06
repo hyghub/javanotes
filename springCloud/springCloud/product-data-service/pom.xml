@@ -5,7 +5,7 @@
         <artifactId>springcloud</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>productDataservice</artifactId>
+    <artifactId>product-data-service</artifactId>
 
     <dependencies>
         <dependency>
