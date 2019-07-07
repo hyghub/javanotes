@@ -25,7 +25,7 @@ public class Product {
 		this.price = price;
 	}
 	public Product() {
-
+		
 	}
 	public Product(int id, String name, int price) {
 		super();
@@ -34,5 +34,5 @@ public class Product {
 		this.price = price;
 	}
 
-
+	
 }
