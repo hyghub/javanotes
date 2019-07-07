@@ -26,7 +26,13 @@ import cn.hutool.core.util.NumberUtil;
 public class ProductViewServiceFeignApplication {
 
 	public static void main(String[] args) {
-    	int port = 0;
+		//判断 rabiitMQ 是否启动
+		int rabbitMQPort = 15672;
+		if(NetUtil.isUsableLocalPort(rabbitMQPort)) {
+			System.err.printf("未在端口%d 发现 rabbitMQ服务，请检查rabbitMQ 是否启动", rabbitMQPort );
+			System.exit(1);
+		}
+		int port = 0;
     	int defaultPort = 8012;
     	Future<Integer> future = ThreadUtil.execAsync(() ->{
 	        	int p = 0;
