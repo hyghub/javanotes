@@ -6,7 +6,7 @@ spring:
       label: master
       server:
         git:
-          uri: https://github.com/hyghub/springcloudConfig
+          uri: https://github.com/hyghub/springcloudConfig/
           search-paths: respo
 eureka:
   client:

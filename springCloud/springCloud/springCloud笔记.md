@@ -26,4 +26,18 @@
   
     `spring-cloud-starter-bus-amqp 用于支持 rabbitmq`
 
-2.
+2. 运行 FreshConfigUtil， 使用 post 的方式访问 http://localhost:8012/actuator/bus-refresh 地址，
+FreshConfigUtil类就是为了可以使用 post 访问，因为它不支持 get 方式访问，直接把这个地址放在浏览器里，是会抛出 405错误的。
+这个地址的作用就是让 config-server 去 git 获取最新的配置信息，并把此信息广播给集群里的两个 视图微服务
+文件不编译的话配置：
+<build>  
+  <resources>  
+    <!-- mapper.xml文件在java目录下 -->
+    <resource>  
+      <directory>src/main/java</directory>  
+        <includes>  
+          <include>*</include>  
+        </includes>  
+    </resource>  
+  </resources>  
+</build>
