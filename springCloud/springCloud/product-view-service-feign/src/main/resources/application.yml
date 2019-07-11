@@ -8,9 +8,10 @@ spring:
     prefix: classpath:/templates/
     suffix: .html
     encoding: UTF-8
-  servlet:
-    content-type: text/html
+    servlet:
+      content-type: text/html
     mode: HTML5
+feign.hystrix.enabled: true
 #新增路径访问允许 这样才能访问 http://localhost:8012/actuator/bus-refresh 地址
 management:
   endpoints:

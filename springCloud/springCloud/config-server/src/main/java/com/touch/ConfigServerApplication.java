@@ -14,6 +14,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @EnableEurekaClient
 public class ConfigServerApplication {
     public static void main(String[] args) {
+        //http://localhost:8030/version/dev
 		int port = 8030;
 		if(!NetUtil.isUsableLocalPort(port)) {
 			System.err.printf("端口%d被占用了，无法启动%n", port );
