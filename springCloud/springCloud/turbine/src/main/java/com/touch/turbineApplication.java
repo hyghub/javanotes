@@ -18,6 +18,7 @@ public class turbineApplication {
             System.err.printf("端口%d被占用了，无法启动%n", port);
             System.exit(1);
         }
+
         new SpringApplicationBuilder(turbineApplication.class).properties("server.port=" + port).run(args);
     }
 }
