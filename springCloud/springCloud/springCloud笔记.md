@@ -35,6 +35,8 @@ FreshConfigUtil类就是为了可以使用 post 访问，因为它不支持 get 
 再次访问 http://127.0.0.1:8012/products可以看到版本号是修改之后的值了。
 在Zipkin 里看不到视图服务的资料了。为了解决这个问题，在启动 Zipkin 的时候 带一个参数就好了：
 java -jar zipkin-server-2.10.1-exec.jar --zipkin.collector.rabbitmq.addresses=localhost
+运行以下命令以重启 rabbitmq： 
+net stop RabbitMQ && net start RabbitMQ
 
 **四、HYSTRIX 断路器** 
 
